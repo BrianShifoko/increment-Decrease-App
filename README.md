@@ -1,5 +1,7 @@
 # Counter Application
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8b9a4edc-81c5-4189-bdb5-a31d3b48a4a1/deploy-status)](https://app.netlify.com/sites/brian-shifoko-increment-decrement-app/deploys)
+
 This is a simple web-based counter application that allows users to increment, decrement, and reset a counter value. Additionally, users can specify a step value for incrementing and decrementing the counter.
 
 ![Screenshot of Counter Application](images/counter%20Application.png)
