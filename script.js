@@ -1,4 +1,3 @@
-
 const counterElement = document.getElementById("counter");
 const incrementButton = document.getElementById("incrementBtn");
 const decrementButton = document.getElementById("decrementBtn");
@@ -6,22 +5,34 @@ const resetButton = document.getElementById("resetBtn");
 const stepInput = document.getElementById("stepInput");
 
 let counter = 0;
+let step = 1;
 
-incrementButton.addEventListener("click", () => {
-    const step = parseInt(stepInput.value) || 1;
+function updateCounter() {
+    counterElement.textContent = counter;
+}
+
+function incrementCounter() {
     counter += step;
-    counterElement.textContent = counter;
-});
+    updateCounter();
+}
 
-decrementButton.addEventListener("click", () => {
-    const step = parseInt(stepInput.value) || 1;
-    if (counter - step >= 0) {
-        counter -= step;
-        counterElement.textContent = counter;
-    }
-});
+function decrementCounter() {
+    counter -= step;
+    updateCounter();
+}
 
-resetButton.addEventListener("click", () => {
+function resetCounter() {
     counter = 0;
-    counterElement.textContent = counter;
+    updateCounter();
+    stepInput.value = ""; 
+}
+
+incrementButton.addEventListener("click", incrementCounter);
+decrementButton.addEventListener("click", decrementCounter);
+resetButton.addEventListener("click", resetCounter);
+
+stepInput.addEventListener("change", () => {
+    step = parseInt(stepInput.value) || 1;
 });
+
+updateCounter();
