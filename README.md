@@ -4,6 +4,8 @@
 
 This is a simple web-based counter application that allows users to increment, decrement, and reset a counter value. Additionally, users can specify a step value for incrementing and decrementing the counter.
 
+Check out the live demo [here](https://increment-decrease-app.netlify.app).
+
 ![Screenshot of Counter Application](images/counter%20Application.png)
 
 ## Features
